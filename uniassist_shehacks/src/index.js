@@ -8,6 +8,8 @@ import {SearchBar} from './searchButton';
 //USE LISTS of the colors and keys? and a component class
 //Use logic in a render function
 
+class 
+
 class TitleBlock extends React.Component{
   render() {
     return(
@@ -70,7 +72,7 @@ class SearchResultsContainer extends React.Component{
   }
 };
 
-
+//Render once within a grid (or twice, taking out the title)
 
 ReactDOM.render(
   <TitleBlock />,
