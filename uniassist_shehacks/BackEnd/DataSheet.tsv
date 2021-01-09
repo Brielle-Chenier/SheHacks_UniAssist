@@ -1,0 +1,32 @@
+Code	Faculty	Program	School	Years	Coop	Tuition	Requirements	Admission mark cutoff	Comp admission avg	Supp app?	Interview?
+MX	Arts & Science	Arts & Science 1	McMaster	4	No		ENG4U MCV4U or MHF4U				
+MB	Business	Business 1	McMaster	4	No		ENG4U, MHF4U, MCV4U			Optional	
+MBH	Business	B.Com. Integrated Business & Humanities	McMaster	4	No		ENG4U, MHF4U, MCV4U				
+ME	Engineering	Engineering 1	McMaster	4	No		ENG4U, SCH4U, SPH4U, MCV4U	87		No	Mandatory
+MEC	Engineering	Engineering 1 co-op	McMaster	4	Yes		ENG4U, SCH4U, SPH4U, MCV4U	87		No	Mandatory
+ME	Engineering	Engineering & Society	McMaster	5	No		ENG4U, SCH4U, SPH4U, MCV4U	87		No	Mandatory
+ME	Engineering	Engineering & Management 	McMaster	5	No		ENG4U, SCH4U, SPH4U, MCV4U	87		No	Mandatory
+ME	Engineering	Engineering & Bioengineering	McMaster	5	No		ENG4U, SCH4U, SPH4U, MCV4U	87		No	Mandatory
+MEH 	Engineering	Integrated Biomedical Engineering and Health Sciences 	McMaster	5	No		ENG4U. MCV4U, SCH4U, SPH4U, SBI4U, one other U or M course	87		No	Mandatory
+MEI	Engineering	Integrated Biomedical Engineering and Health Sciences co-op	McMaster	5	Yes		ENG4U, MCV4U, SCH4U, SPH4U, SBI4U, one other U or M course	87		No	Mandatory
+MC	Engineering	Computer Science 1	McMaster	4	No		ENG4U, MCV4U, Two of : SBI4U, SCH4U, SPH4U, SE4U, ICS4U, TEJ4U			No	Mandatory
+MCC	Engineering	Computer Science 1 co-op	McMaster	4	Yes		ENG4U, MCV4U, Two of : SBI4U, SCH4U, SPH4U, SE4U, ICS4U, TEJ4U			No	Mandatory
+MAT	Engineering	Autimotive & Vehicle Engineering Technology 1 Co-op	McMaster	4	Yes		ENG4U, SCH4U, SPH4U, MCV4U			No	Mandatory
+MTT	Engineering	Biotechnology 1 co-op	McMaster	4	Yes		ENG4U, SCH4U, SPH4U, MCV4U			No	Mandatory
+MPT	Engineering	Automation Engineering Technology 1 co-op	McMaster	4	Yes		ENG4U, SCH4U, SPH4U, MCV4U				
+MNS	Health Sciences	Honours Health Sciences 1	McMaster	4	No		ENG4U, One of: MCV4U, MHF4U, MDM4U, SBI4U, one non-math, non-science, non-technology 4U or 4M credit			Mandatory	
+MY	Health Sciences	Midwifery 1	McMaster	4	No		ENG4U, SBI4U, SCH4U			Mandatory	
+MN	Health Sciences	Nursing 1	McMaster	4	No		ENG4U, SBI4U, SCH4U, One of: MHF4U, MCV4U, MDM4U			Mandatory	
+MH	Humanities	Humanities 1	McMaster	4	No		ENG4U				
+MM	Humanities	Music 1	McMaster	4	No		ENG4U				
+MHS	Humanities	Studio Art 1	McMaster	4	No		ENG4U				
+MPS	Science	Chemical & Physical Sciences Gateway	McMaster	4	Optional		ENG4U, MHF4U, MCV4U, SCH4U, SPH4U				
+MEE	Science	Environmental and Earth Sciences Gateway	McMaster	4	Optional		ENG4U, One of MHF4U, MCV4U, Oe of SBI4U, SCH4U, One of MHF4U, MCV4U, SBI4U, SCH4U, SPH4U, MCV4U recommended				
+MIS	Science	Honours Integrated Science	McMaster	4	Optional		ENG4U, MHF4U, MCV4U, Two of SBI4U, SCH4U or SPH4U				
+MV	Science	Honours Kinesiology	McMaster	4	Optional		ENG4U MCV4U SBI4U, PSK4U recommended				
+MLS	Science	Life Sciences Gateway	McMaster	4	Optional		ENG4U, SBI4U, One of MHF4U, MCV4U, One of MHF4U, MCV4U, SCH4U, SPH4U, MCV4U recommended				
+MZ	Science	Bachelor of Science	McMaster	4	Optional		ENG4U, MHF4U, MCV4U				
+MRS	Science	Medical Ratiation Sciences	McMaster	4	Optional		ENG4U, MHF4U, MCV4U, SBI4U, SCH4U				
+MLE	Social Science	Economics 1	McMaster	4	No		ENG4U, Two of MHF4U, MCV4U or MDM4U				
+MLH	Social Science	Honours Health & Society	McMaster	4	No		ENG4U				
+ML	Social Science	Social Sciences 1	McMaster	4	No		ENG4U, MHF4U and MCV4U and SBI4U recommended				
