@@ -1,13 +1,33 @@
 import React from 'react';
 
+
 export class SearchBar extends React.Component {
-  render(){
-    return(
-      <button type = "button" onClick = {this.props.onClick} class = "colorButton">
+    constructor(props) {
+      super(props);
+      this.state = {value: ''};
 
-      </button>
+      this.handleChange = this.handleChange.bind(this);
+      this.handleSubmit = this.handleSubmit.bind(this);
+    }
 
-      <TextField id="outlined-basic" label="Enter OUAC Code" variant="outlined" />
-    );
-  };
-}
+    handleChange(event) {
+      this.setState({value: event.target.value});
+    }
+
+    handleSubmit(event) {
+      alert('A name was submitted: ' + this.state.value);
+      event.preventDefault();
+    }
+
+    render() {
+      return (
+        <form onSubmit={this.handleSubmit}>
+          <label>
+
+            <input type="text" value={this.state.value} onChange={this.handleChange} />
+          </label>
+          <input type="submit" value="Search" />
+        </form>
+      );
+    }
+  }
