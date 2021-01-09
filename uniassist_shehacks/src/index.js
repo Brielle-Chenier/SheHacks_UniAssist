@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 //Access-Control-Allow-Origin: *;
 import './index.css';
+import {SeachBar} from './searchButton';
 
 //USE IMAGE ON CLICK!!! (EVENT LISTENERS)
 //USE LISTS of the colors and keys? and a component class
@@ -11,7 +12,7 @@ class TitleBlock extends React.Component{
   render() {
     return(
       <blockquote>
-        <h1> Welcome to Uni Assist</h1>
+        <h1> Welcome to Uni Assist! </h1>
 
       </blockquote>
     );
@@ -58,7 +59,22 @@ class MyComponent extends React.Component {
 }
 }
 
+class SearchResultsContainer extends React.Component{
+  render() {
+    return(
+      <div>
+        <p> Search Here! </p>
+        <SearchBar />
+      </div>
+    );
+  }
+};
 
+
+ReactDOM.render(
+  <TitleBlock />,
+  document.getElementById("titleBlock")
+);
 
 ReactDOM.render(
   <MyComponent/>,
