@@ -2,9 +2,40 @@ import React from 'react';
 
 
 export class SearchBar extends React.Component {
+  componentDidMount() {
+
+    fetch("https://northamerica-northeast1-shehacks21.cloudfunctions.net/getSchoolInfo")
+      .then(response => response.json())
+      .then(result => {
+          this.setState({
+            userName: result.name,
+            userAge: result.age
+          });
+
+        },
+        // Note: it's important to handle errors here
+        // instead of a catch() block so that we don't swallow
+        // exceptions from actual bugs in components.
+      )
+  }
+
     constructor(props) {
       super(props);
-      this.state = {value: ''};
+      this.state = {
+        code: "",
+        faculty: "",
+        program: "",
+        school: "",
+        years: "",
+        coop: "",
+        tuition: "",
+        Requirements: "",
+        LowAvg: "",
+        CompAvg: "",
+        SuppApp: "",
+        Interview: ""
+
+        };
 
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
