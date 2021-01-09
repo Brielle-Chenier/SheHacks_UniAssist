@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 //Access-Control-Allow-Origin: *;
 import './index.css';
-import {SeachBar} from './searchButton';
+import {SearchBar} from './searchButton';
 
 //USE IMAGE ON CLICK!!! (EVENT LISTENERS)
 //USE LISTS of the colors and keys? and a component class
@@ -80,4 +80,14 @@ ReactDOM.render(
 ReactDOM.render(
   <MyComponent/>,
   document.getElementById('test')
+);
+
+ReactDOM.render(
+  <SearchResultsContainer/>,
+  document.getElementById('search')
+);
+
+ReactDOM.render(
+  <App/>,
+  document.getElementById('root')
 );
