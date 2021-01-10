@@ -24,7 +24,7 @@ export class SearchBar extends React.Component {
         };
 
       this.handleChange = this.handleChange.bind(this);
-      //this.handleSubmit = this.handleSubmit.bind(this);
+      this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleChange(event) {
@@ -32,13 +32,24 @@ export class SearchBar extends React.Component {
     }
 
    componentDidMount() {
-     console.log("mounted!")
+     let cat = this.state.value
+     console.log(cat)
       fetch("https://northamerica-northeast1-shehacks21.cloudfunctions.net/getSchoolInfo")
         .then(response => response.json())
         .then(result => {
             this.setState({
-              code: result.Code,
-              userAge: result.age
+              value: result.Code,
+              faculty: result.Faculty,
+              program: result.Program,
+              school: result.School,
+              years: result.Years,
+              coop: result.Coop,
+              tuition: result.Tuition,
+              requirements: result.Requirements,
+              lowAvg: result.LowAvg,
+              caseompAvg: result.CompAvg,
+              suppApp: result.SuppApp,
+              interview: result.Interview
             });
 
           },
@@ -48,11 +59,9 @@ export class SearchBar extends React.Component {
         )
     }
 
-    handleSubmit = () => {
-     alert('A name was submitted: ' + this.state.value);
-     this.setState({
-       code: '8'
-     });
+    handleSubmit (event) {
+     alert('Code Submitted: ' + this.state.value);
+     this.setState({code: this.state.value});
 
     /*  fetch("https://northamerica-northeast1-shehacks21.cloudfunctions.net/getSchoolInfo")
         .then(response => response.json())
@@ -68,7 +77,7 @@ export class SearchBar extends React.Component {
           // exceptions from actual bugs in components.
         )
       */
-      //event.preventDefault();
+      event.preventDefault();
     }
 
     render() {
