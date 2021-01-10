@@ -13,9 +13,8 @@ code {
     monospace;
 }
 
-h2 {
-  text-align: center;
-  color: #000;
+h1 {
+  text-height: 40px;
 }
 
 div {
@@ -23,8 +22,11 @@ div {
 }
 
 div.titleText {
+  height: 100px;
   text-align: center;
-  color: #235f35;
+  color: #fff;
+  background-color: #39D550;
+  font-size: 30px;
 }
 
 button.colorButton{

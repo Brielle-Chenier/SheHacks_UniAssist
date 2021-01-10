@@ -3,6 +3,7 @@ import React from 'react';
 import careltonPic from './Uni Pictures/Carleton.png';
 import waterlooPic from './Uni Pictures/Waterloo.png';
 import macPic from './Uni Pictures/Mac.png';
+import laurierPic from './Uni Pictures/Laurier.PNG';
 
 class SearchBar extends React.Component {
 
@@ -85,6 +86,10 @@ class SearchBar extends React.Component {
       let picture
       if (this.state.school === "McMaster"){
         picture = macPic
+      }else if (this.state.school === "Waterloo"){
+        picture = waterlooPic
+      }else if (this.state.school === "Laurier"){
+        picture = laurierPic
       }else{
         picture = careltonPic
       }
@@ -104,7 +109,7 @@ class SearchBar extends React.Component {
             alt = 'Waterloo'
             class = 'schoolPic'
             />
-          <div> OUAC Code {this.state.code} </div>
+          <div> OUAC Code: {this.state.code} </div>
           <div> Program: {this.state.program} </div>
           <div> School: {this.state.school} </div>
           <div> Faculty: {this.state.faculty} </div>
