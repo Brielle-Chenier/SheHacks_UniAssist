@@ -27,6 +27,7 @@ export default function NestedGrid() {
         <Grid item xs={4}>
           <Paper className={classes.paper}>
             <SearchBar link = "https://northamerica-northeast1-shehacks21.cloudfunctions.net/getSchoolInfo-1"/>
+
             <div>
             <IconButton aria-label="delete">
               <FavoriteIcon> </FavoriteIcon>
@@ -36,11 +37,7 @@ export default function NestedGrid() {
         </Grid>
         <Grid item xs={4}>
           <Paper className={classes.paper}>
-<<<<<<< Updated upstream
-            <SearchBar  link = "https://northamerica-northeast1-shehacks21.cloudfunctions.net/getSchoolInfo-2"/>
-=======
             <SearchBar link = "https://northamerica-northeast1-shehacks21.cloudfunctions.net/getSchoolInfo-2"/>
->>>>>>> Stashed changes
             <div>
             <IconButton aria-label="delete">
               <FavoriteIcon> </FavoriteIcon>
@@ -50,15 +47,11 @@ export default function NestedGrid() {
         </Grid>
         <Grid item xs={4}>
           <Paper className={classes.paper}>
-<<<<<<< Updated upstream
-           <SearchBar  link = "https://northamerica-northeast1-shehacks21.cloudfunctions.net/getSchoolInfo-3"/>
-           <div>
-           <IconButton >
-=======
+
            <SearchBar link = "https://northamerica-northeast1-shehacks21.cloudfunctions.net/getSchoolInfo-3"/>
            <div>
+           
            <IconButton>
->>>>>>> Stashed changes
              <FavoriteIcon> </FavoriteIcon>
            </IconButton>
            </div>

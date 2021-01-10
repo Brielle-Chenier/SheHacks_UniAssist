@@ -35,10 +35,7 @@ class SearchBar extends React.Component {
     }
 
    componentDidMount() {
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
       fetch(this.props.link)
         .then(response => response.json())
         .then(result => {
@@ -66,6 +63,7 @@ class SearchBar extends React.Component {
 
     handleSubmit (event){
       //alert('Code Submitted: ' + this.state.value);
+
       this.setState({code:this.state.value})
     /*  fetch("https://northamerica-northeast1-shehacks21.cloudfunctions.net/getSchoolInfo")
         .then(response => response.json())

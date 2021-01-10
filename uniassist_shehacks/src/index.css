@@ -1,4 +1,5 @@
 body {
+  background-color: rgb(255, 255, 255);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -12,22 +13,26 @@ code {
     monospace;
 }
 
-h2 {
-  text-align: center;
-  color: #000;
+h1 {
+  text-height: 40px;
 }
+
 div {
   text-align: left;
 }
+
 div.titleText {
+  height: 100px;
   text-align: center;
-  color: #559940;
+  color: #fff;
+  background-color: #39D550;
+  font-size: 30px;
 }
 
 button.colorButton{
   width: 250px;
   height: 250px;
-  color: #fff;
+  color: rgb(158, 11, 11);
   padding: 5px;
 }
 
@@ -35,6 +40,8 @@ div.colorCont{
   text-align: center;
 }
 
-img.colorPic{
-  width: 100%
+img.schoolPic{
+  margin-right: auto;
+  martin-left: auto;
+  width: 475px;
 }
