@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 //Access-Control-Allow-Origin: *;
 import './index.css';
-import {SearchBar} from './searchButton';
+import SearchBar from './searchButtonOne';
+import NestedGrid from './grid';
 
 //USE IMAGE ON CLICK!!! (EVENT LISTENERS)
 //USE LISTS of the colors and keys? and a component class
@@ -59,17 +60,6 @@ class MyComponent extends React.Component {
 }
 }
 
-class SearchResultsContainer extends React.Component{
-  render() {
-    return(
-      <div>
-        <p> Search Here! </p>
-        <SearchBar />
-      </div>
-    );
-  }
-};
-
 //Render once within a grid (or twice, taking out the title)
 
 ReactDOM.render(
@@ -77,17 +67,23 @@ ReactDOM.render(
   document.getElementById("titleBlock")
 );
 
-ReactDOM.render(
-  <MyComponent/>,
-  document.getElementById('test')
-);
+// ReactDOM.render(
+//   <MyComponent/>,
+//   document.getElementById('test')
+// );
 
-ReactDOM.render(
-  <SearchResultsContainer/>,
-  document.getElementById('search')
-);
-
+// ReactDOM.render(
+//   <SearchBar/>,
+//   document.getElementById('search')
+// );
+ /*
 ReactDOM.render(
   <App/>,
-  document.getElementById('root')
+  document.getElementById('app')
+);
+*/
+
+ReactDOM.render(
+  <NestedGrid/>,
+  document.getElementById('grid')
 );

@@ -3,19 +3,7 @@ import TextField from '@material-ui/core/TextField';
 
 
 export class SearchBar extends React.Component {
-<<<<<<< HEAD
-  render(){
-    return(
-      <div>
-        <button type = "button" onClick = {this.props.onClick} class = "colorButton">
-        </button>
 
-        <TextField id="outlined-basic" label="Enter OUAC Code" variant="outlined" />
-      </div>
-    );
-  };
-}
-=======
   componentDidMount() {
 
     fetch("https://northamerica-northeast1-shehacks21.cloudfunctions.net/getSchoolInfo")
@@ -76,4 +64,3 @@ export class SearchBar extends React.Component {
       );
     }
   }
->>>>>>> 7d1360ba25df4415e0aeb6dda0593346fa104868
