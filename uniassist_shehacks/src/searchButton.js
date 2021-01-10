@@ -47,7 +47,7 @@ export class SearchBar extends React.Component {
               tuition: result.Tuition,
               requirements: result.Requirements,
               lowAvg: result.LowAvg,
-              caseompAvg: result.CompAvg,
+              compAvg: result.CompAvg,
               suppApp: result.SuppApp,
               interview: result.Interview
             });
@@ -91,10 +91,20 @@ export class SearchBar extends React.Component {
             </label>
               <input type="submit" value="Search" />
           </form>
+          <div> OUAC Code {this.state.code} </div>
+          <div> Program: {this.state.program} </div>
+          <div> School: {this.state.school} </div>
+          <div>Faculty: {this.state.faculty} </div>
+          <div>Years: {this.state.years} </div>
+          <div>Coop: {this.state.coop} </div>
+          <div>Tuition: {this.state.tuition} </div>
+          <div>Requirements: {this.state.requirements} </div>
+          <div>Low Average: {this.state.lowAvg} </div>
+          <div>Competitive Average: {this.state.compAvg}</div>
+          <div>Supplemental: {this.state.suppApp}</div>
+          <div>Interview: {this.state.interview}</div>
 
-              <div> Hello {this.state.code} </div>
-              <div> {this.state.age} </div>
-          </div>
+        </div>
       );
     }
   };
