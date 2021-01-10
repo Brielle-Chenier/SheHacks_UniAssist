@@ -86,7 +86,7 @@ class SearchBar extends React.Component {
       if (this.state.school === "McMaster"){
         picture = macPic
       }else{
-        picture = waterlooPic
+        picture = careltonPic
       }
 
       return (
@@ -100,7 +100,7 @@ class SearchBar extends React.Component {
           </form>
 
           <img
-            src = {waterlooPic}
+            src = {picture}
             alt = 'Waterloo'
             class = 'schoolPic'
             />
