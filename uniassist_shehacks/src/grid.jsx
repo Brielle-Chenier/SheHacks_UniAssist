@@ -3,6 +3,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import SearchBar from './searchButtonOne';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+import FavoriteIcon from '@material-ui/icons/Favorite';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,16 +26,25 @@ export default function NestedGrid() {
         <Grid item xs={4}>
           <Paper className={classes.paper}>
             <SearchBar/>
+            <div>
+            <FavoriteBorderIcon></FavoriteBorderIcon>
+            </div>
           </Paper>
         </Grid>
         <Grid item xs={4}>
           <Paper className={classes.paper}>
             <SearchBar/>
+            <div>
+            <FavoriteBorderIcon></FavoriteBorderIcon>
+            </div>
           </Paper>
         </Grid>
         <Grid item xs={4}>
           <Paper className={classes.paper}>
            <SearchBar/>
+           <div>
+           <FavoriteBorderIcon></FavoriteBorderIcon>
+           </div>
           </Paper>
         </Grid>
       </React.Fragment>

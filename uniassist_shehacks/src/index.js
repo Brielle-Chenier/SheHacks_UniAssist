@@ -67,22 +67,6 @@ ReactDOM.render(
   document.getElementById("titleBlock")
 );
 
-// ReactDOM.render(
-//   <MyComponent/>,
-//   document.getElementById('test')
-// );
-
-// ReactDOM.render(
-//   <SearchBar/>,
-//   document.getElementById('search')
-// );
- /*
-ReactDOM.render(
-  <App/>,
-  document.getElementById('app')
-);
-*/
-
 ReactDOM.render(
   <NestedGrid/>,
   document.getElementById('grid')

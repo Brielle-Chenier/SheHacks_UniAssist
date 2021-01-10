@@ -1,18 +1,6 @@
 import React from 'react';
 //import TextField from '@material-ui/core/TextField';
 
-
-// export default class SearchResultsContainer extends React.Component{
-//   render() {
-//     return(
-//       <div>
-//         <p> Search Here! </p>
-//         <SearchBar />
-//       </div>
-//     );
-//   }
-// };
-
 class SearchBar extends React.Component {
 
     constructor(props) {
