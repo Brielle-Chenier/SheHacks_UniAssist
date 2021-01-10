@@ -1,5 +1,10 @@
 import React from 'react';
 //import TextField from '@material-ui/core/TextField';
+import careltonPic from './Uni Pictures/Carleton.png';
+import waterlooPic from './Uni Pictures/Waterloo.png';
+import macPic from './Uni Pictures/Mac.png';
+
+
 
 
 export class SearchBar extends React.Component {
@@ -108,6 +113,11 @@ export class SearchBar extends React.Component {
             </label>
               <input type="submit" value="Search" />
           </form>
+          <img
+            //src = {waterlooPic}
+            alt = 'Waterloo'
+            class = 'schoolPic'
+          />
           <div> OUAC Code {this.state.code} </div>
           <div> Program: {this.state.program} </div>
           <div> School: {this.state.school} </div>
