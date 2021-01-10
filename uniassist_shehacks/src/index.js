@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 //Access-Control-Allow-Origin: *;
 import './index.css';
-
 import SearchBar from './searchButtonOne';
 import NestedGrid from './grid';
 

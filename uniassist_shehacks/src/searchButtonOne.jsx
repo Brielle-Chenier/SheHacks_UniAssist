@@ -22,7 +22,8 @@ class SearchBar extends React.Component {
         CompAvg: "",
         SuppApp: "",
         Interview: "",
-        value: ''
+        value: '',
+        extension: ""
 
         };
 
@@ -36,11 +37,11 @@ class SearchBar extends React.Component {
 
    componentDidMount() {
 
-      fetch(this.props.link)
+      fetch("https://northamerica-northeast1-shehacks21.cloudfunctions.net/getSchoolInfo" + (this.state.extension))
         .then(response => response.json())
         .then(result => {
             this.setState({
-              value: result.Code,
+              code: result.Code,
               faculty: result.Faculty,
               program: result.Program,
               school: result.School,
@@ -63,14 +64,28 @@ class SearchBar extends React.Component {
 
     handleSubmit (event){
       //alert('Code Submitted: ' + this.state.value);
-
-      this.setState({code:this.state.value})
-    /*  fetch("https://northamerica-northeast1-shehacks21.cloudfunctions.net/getSchoolInfo")
+      this.setState({
+        code:this.state.value,
+        extension: "?name=" + this.state.code
+      })
+      let link = "https://northamerica-northeast1-shehacks21.cloudfunctions.net/getSchoolInfo" + (this.state.extension)
+      console.log(link)
+      fetch(link)
         .then(response => response.json())
         .then(result => {
             this.setState({
               code: result.Code,
-              userAge: result.age
+              faculty: result.Faculty,
+              program: result.Program,
+              school: result.School,
+              years: result.Years,
+              coop: result.Coop,
+              tuition: result.Tuition,
+              requirements: result.Requirements,
+              lowAvg: result.LowAvg,
+              compAvg: result.CompAvg,
+              suppApp: result.SuppApp,
+              interview: result.Interview
             });
 
           },
@@ -78,7 +93,7 @@ class SearchBar extends React.Component {
           // instead of a catch() block so that we don't swallow
           // exceptions from actual bugs in components.
         )
-      */
+
       event.preventDefault();
     }
 
