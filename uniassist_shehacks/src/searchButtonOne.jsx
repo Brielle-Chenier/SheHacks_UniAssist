@@ -81,13 +81,14 @@ class SearchBar extends React.Component {
     }
 
     render() {
+
       let picture
       if (this.state.school === "McMaster"){
-        picture = <macPic>
+        picture = macPic
+      }else{
+        picture = waterlooPic
       }
-      else {
-        picture = <waterlooPic>
-      }
+
       return (
         <div>
           <form onSubmit={this.handleSubmit}>
@@ -99,23 +100,23 @@ class SearchBar extends React.Component {
           </form>
 
           <img
-            src = picture
+            src = {waterlooPic}
             alt = 'Waterloo'
             class = 'schoolPic'
             />
           <div> OUAC Code {this.state.code} </div>
           <div> Program: {this.state.program} </div>
           <div> School: {this.state.school} </div>
-          <div>Faculty: {this.state.faculty} </div>
-          <div>Years: {this.state.years} </div>
-          <div>Coop: {this.state.coop} </div>
-          <div>Tuition: {this.state.tuition} </div>
-          <div>Requirements: {this.state.requirements} </div>
-          <div>Low Average: {this.state.lowAvg} </div>
-          <div>Competitive Average: {this.state.compAvg}</div>
-          <div>Supplemental: {this.state.suppApp}</div>
-          <div>Interview: {this.state.interview}</div>
-          </div>
+          <div> Faculty: {this.state.faculty} </div>
+          <div> Years: {this.state.years} </div>
+          <div> Coop: {this.state.coop} </div>
+          <div> Tuition: {this.state.tuition} </div>
+          <div> Requirements: {this.state.requirements} </div>
+          <div> Low Average: {this.state.lowAvg} </div>
+          <div> Competitive Average: {this.state.compAvg}</div>
+          <div> Supplemental: {this.state.suppApp}</div>
+          <div> Interview: {this.state.interview}</div>
+        </div>
       );
     }
   };
