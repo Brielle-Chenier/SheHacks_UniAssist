@@ -54,8 +54,7 @@ export class SearchBar extends React.Component {
     }
 
    componentDidMount() {
-     let cat = this.state.value
-     console.log(cat)
+     
       fetch("https://northamerica-northeast1-shehacks21.cloudfunctions.net/getSchoolInfo")
         .then(response => response.json())
         .then(result => {
