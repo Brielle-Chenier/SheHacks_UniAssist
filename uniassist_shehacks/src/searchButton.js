@@ -1,5 +1,5 @@
 import React from 'react';
-import TextField from '@material-ui/core/TextField';
+//import TextField from '@material-ui/core/TextField';
 
 
 export class SearchBar extends React.Component {
@@ -35,7 +35,8 @@ export class SearchBar extends React.Component {
         LowAvg: "",
         CompAvg: "",
         SuppApp: "",
-        Interview: ""
+        Interview: "",
+        value: ''
 
         };
 
@@ -47,20 +48,80 @@ export class SearchBar extends React.Component {
       this.setState({value: event.target.value});
     }
 
-    handleSubmit(event) {
-      alert('A name was submitted: ' + this.state.value);
+   componentDidMount() {
+     let cat = this.state.value
+     console.log(cat)
+      fetch("https://northamerica-northeast1-shehacks21.cloudfunctions.net/getSchoolInfo")
+        .then(response => response.json())
+        .then(result => {
+            this.setState({
+              value: result.Code,
+              faculty: result.Faculty,
+              program: result.Program,
+              school: result.School,
+              years: result.Years,
+              coop: result.Coop,
+              tuition: result.Tuition,
+              requirements: result.Requirements,
+              lowAvg: result.LowAvg,
+              compAvg: result.CompAvg,
+              suppApp: result.SuppApp,
+              interview: result.Interview
+            });
+
+          },
+          // Note: it's important to handle errors here
+          // instead of a catch() block so that we don't swallow
+          // exceptions from actual bugs in components.
+        )
+    }
+
+    handleSubmit (event) {
+     alert('Code Submitted: ' + this.state.value);
+     this.setState({code: this.state.value});
+
+    /*  fetch("https://northamerica-northeast1-shehacks21.cloudfunctions.net/getSchoolInfo")
+        .then(response => response.json())
+        .then(result => {
+            this.setState({
+              code: result.Code,
+              age: result.age
+            });
+
+          },
+          // Note: it's important to handle errors here
+          // instead of a catch() block so that we don't swallow
+          // exceptions from actual bugs in components.
+        )
+      */
       event.preventDefault();
     }
 
     render() {
+      console.log("render() method");
       return (
-        <form onSubmit={this.handleSubmit}>
-          <label>
+        <div>
+          <form onSubmit={this.handleSubmit}>
+            <label>
 
-            <input type="text" value={this.state.value} onChange={this.handleChange} />
-          </label>
-          <input type="submit" value="Search" />
-        </form>
+              <input type="text" value={this.state.value} onChange={this.handleChange} />
+            </label>
+              <input type="submit" value="Search" />
+          </form>
+          <div> OUAC Code {this.state.code} </div>
+          <div> Program: {this.state.program} </div>
+          <div> School: {this.state.school} </div>
+          <div>Faculty: {this.state.faculty} </div>
+          <div>Years: {this.state.years} </div>
+          <div>Coop: {this.state.coop} </div>
+          <div>Tuition: {this.state.tuition} </div>
+          <div>Requirements: {this.state.requirements} </div>
+          <div>Low Average: {this.state.lowAvg} </div>
+          <div>Competitive Average: {this.state.compAvg}</div>
+          <div>Supplemental: {this.state.suppApp}</div>
+          <div>Interview: {this.state.interview}</div>
+
+        </div>
       );
     }
   }
