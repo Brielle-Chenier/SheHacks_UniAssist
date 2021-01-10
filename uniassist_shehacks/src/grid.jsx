@@ -32,7 +32,8 @@ export default function NestedGrid() {
       <React.Fragment>
         <Grid item xs={4}>
           <Paper className={classes.paper}>
-            <SearchBar/>
+            <SearchBar link = "https://northamerica-northeast1-shehacks21.cloudfunctions.net/getSchoolInfo-1"/>
+
             <div>
             <IconButton color = {colourOne? "secondary" : "inherit"} onClick={() => { setColourOne(!colourOne) }}> 
               <FavoriteIcon> </FavoriteIcon>
@@ -42,7 +43,7 @@ export default function NestedGrid() {
         </Grid>
         <Grid item xs={4}>
           <Paper className={classes.paper}>
-            <SearchBar/>
+            <SearchBar link = "https://northamerica-northeast1-shehacks21.cloudfunctions.net/getSchoolInfo-2"/>
             <div>
             <IconButton color = {colourTwo? "secondary" : "inherit"} onClick={() => { setColourTwo(!colourTwo) }}> 
               <FavoriteIcon> </FavoriteIcon>
@@ -52,7 +53,8 @@ export default function NestedGrid() {
         </Grid>
         <Grid item xs={4}>
           <Paper className={classes.paper}>
-           <SearchBar/>
+
+           <SearchBar link = "https://northamerica-northeast1-shehacks21.cloudfunctions.net/getSchoolInfo-3"/>
            <div>
            <IconButton color = {colour? "secondary" : "inherit"} onClick={() => { setColour(!colour) }}> 
               <FavoriteIcon> </FavoriteIcon>

@@ -53,13 +53,17 @@ export class SearchBar extends React.Component {
       this.setState({value: event.target.value});
     }
 
-   componentDidMount() {
-     
-      fetch("https://northamerica-northeast1-shehacks21.cloudfunctions.net/getSchoolInfo")
+
+    handleSubmit(event) {
+      alert('A name was submitted: ' + this.state.value);
+
+
+      fetch("https://northamerica-northeast1-shehacks21.cloudfunctions.net/getSchoolInfo-1")
         .then(response => response.json())
         .then(result => {
             this.setState({
-              value: result.Code,
+              code: result.Code,
+
               faculty: result.Faculty,
               program: result.Program,
               school: result.School,
@@ -98,6 +102,7 @@ export class SearchBar extends React.Component {
           // exceptions from actual bugs in components.
         )
       */
+
       event.preventDefault();
     }
 
