@@ -3,28 +3,9 @@ import React from 'react';
 import careltonPic from './Uni Pictures/Carleton.png';
 import waterlooPic from './Uni Pictures/Waterloo.png';
 import macPic from './Uni Pictures/Mac.png';
+import laurierPic from './Uni Pictures/Laurier.PNG';
 
-
-
-
-export class SearchBar extends React.Component {
-
-  componentDidMount() {
-
-    fetch("https://northamerica-northeast1-shehacks21.cloudfunctions.net/getSchoolInfo")
-      .then(response => response.json())
-      .then(result => {
-          this.setState({
-            userName: result.name,
-            userAge: result.age
-          });
-
-        },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
-      )
-  }
+class SearchBar extends React.Component {
 
     constructor(props) {
       super(props);
@@ -41,7 +22,8 @@ export class SearchBar extends React.Component {
         CompAvg: "",
         SuppApp: "",
         Interview: "",
-        value: ''
+        value: '',
+        extension: ""
 
         };
 
@@ -53,17 +35,13 @@ export class SearchBar extends React.Component {
       this.setState({value: event.target.value});
     }
 
+   componentDidMount() {
 
-    handleSubmit(event) {
-      alert('A name was submitted: ' + this.state.value);
-
-
-      fetch("https://northamerica-northeast1-shehacks21.cloudfunctions.net/getSchoolInfo-1")
+      fetch("https://northamerica-northeast1-shehacks21.cloudfunctions.net/getSchoolInfo" + (this.state.extension))
         .then(response => response.json())
         .then(result => {
             this.setState({
               code: result.Code,
-
               faculty: result.Faculty,
               program: result.Program,
               school: result.School,
@@ -84,16 +62,30 @@ export class SearchBar extends React.Component {
         )
     }
 
-    handleSubmit (event) {
-     alert('Code Submitted: ' + this.state.value);
-     this.setState({code: this.state.value});
-
-    /*  fetch("https://northamerica-northeast1-shehacks21.cloudfunctions.net/getSchoolInfo")
+    handleSubmit (event){
+      //alert('Code Submitted: ' + this.state.value);
+      this.setState({
+        code:this.state.value,
+        extension: "?name=" + this.state.code
+      })
+      let link = "https://northamerica-northeast1-shehacks21.cloudfunctions.net/getSchoolInfo" + (this.state.extension)
+      console.log(link)
+      fetch(link)
         .then(response => response.json())
         .then(result => {
             this.setState({
               code: result.Code,
-              age: result.age
+              faculty: result.Faculty,
+              program: result.Program,
+              school: result.School,
+              years: result.Years,
+              coop: result.Coop,
+              tuition: result.Tuition,
+              requirements: result.Requirements,
+              lowAvg: result.LowAvg,
+              compAvg: result.CompAvg,
+              suppApp: result.SuppApp,
+              interview: result.Interview
             });
 
           },
@@ -101,13 +93,23 @@ export class SearchBar extends React.Component {
           // instead of a catch() block so that we don't swallow
           // exceptions from actual bugs in components.
         )
-      */
 
       event.preventDefault();
     }
 
     render() {
-      console.log("render() method");
+
+      let picture
+      if (this.state.school === "McMaster"){
+        picture = macPic
+      }else if (this.state.school === "Waterloo"){
+        picture = waterlooPic
+      }else if (this.state.school === "Laurier"){
+        picture = laurierPic
+      }else{
+        picture = careltonPic
+      }
+
       return (
         <div>
           <form onSubmit={this.handleSubmit}>
@@ -117,25 +119,27 @@ export class SearchBar extends React.Component {
             </label>
               <input type="submit" value="Search" />
           </form>
+
           <img
-            //src = {waterlooPic}
+            src = {picture}
             alt = 'Waterloo'
             class = 'schoolPic'
-          />
-          <div> OUAC Code {this.state.code} </div>
+            />
+          <div> OUAC Code: {this.state.code} </div>
           <div> Program: {this.state.program} </div>
           <div> School: {this.state.school} </div>
-          <div>Faculty: {this.state.faculty} </div>
-          <div>Years: {this.state.years} </div>
-          <div>Coop: {this.state.coop} </div>
-          <div>Tuition: {this.state.tuition} </div>
-          <div>Requirements: {this.state.requirements} </div>
-          <div>Low Average: {this.state.lowAvg} </div>
-          <div>Competitive Average: {this.state.compAvg}</div>
-          <div>Supplemental: {this.state.suppApp}</div>
-          <div>Interview: {this.state.interview}</div>
-
+          <div> Faculty: {this.state.faculty} </div>
+          <div> Years: {this.state.years} </div>
+          <div> Coop: {this.state.coop} </div>
+          <div> Tuition: {this.state.tuition} </div>
+          <div> Requirements: {this.state.requirements} </div>
+          <div> Low Average: {this.state.lowAvg} </div>
+          <div> Competitive Average: {this.state.compAvg}</div>
+          <div> Supplemental: {this.state.suppApp}</div>
+          <div> Interview: {this.state.interview}</div>
         </div>
       );
     }
-  }
+  };
+
+export default SearchBar;

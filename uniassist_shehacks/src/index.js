@@ -2,13 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 //Access-Control-Allow-Origin: *;
 import './index.css';
-import {SearchBar} from './searchButton';
+import SearchBar from './searchButtonOne';
+import NestedGrid from './grid';
 
-//USE IMAGE ON CLICK!!! (EVENT LISTENERS)
-//USE LISTS of the colors and keys? and a component class
-//Use logic in a render function
 
-class 
+
 
 class TitleBlock extends React.Component{
   render() {
@@ -21,45 +19,6 @@ class TitleBlock extends React.Component{
   }
 };
 
-class SchoolData extends React.Component{
-
-};
-
-class MyComponent extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      userName: 'blank',
-      userAge: '0'
-    };
-  }
-
-  componentDidMount() {
-
-    fetch("https://northamerica-northeast1-shehacks21.cloudfunctions.net/getSchoolInfo")
-      .then(response => response.json())
-      .then(result => {
-          this.setState({
-            userName: result.name,
-            userAge: result.age
-          });
-
-        },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
-      )
-  }
-
-  render() {
-    return (
-      <div>
-        <div> {this.state.userName} </div>
-        <div> {this.state.userAge} </div>
-      </div>
-    )
-}
-}
 
 class SearchResultsContainer extends React.Component{
   render() {
@@ -72,7 +31,6 @@ class SearchResultsContainer extends React.Component{
   }
 };
 
-//Render once within a grid (or twice, taking out the title)
 
 ReactDOM.render(
   <TitleBlock />,
@@ -80,16 +38,11 @@ ReactDOM.render(
 );
 
 ReactDOM.render(
-  <MyComponent/>,
-  document.getElementById('test')
+  <NestedGrid/>,
+  document.getElementById('grid')
 );
 
-ReactDOM.render(
-  <SearchResultsContainer/>,
+/*ReactDOM.render (
+  <SearchResultsContainer />,
   document.getElementById('search')
-);
-
-ReactDOM.render(
-  <App/>,
-  document.getElementById('root')
-);
+);*/
